@@ -18,7 +18,7 @@ export function Navigation() {
         <Link href="/" className="flex items-center space-x-2">
           <ParkingSquare className="h-8 w-8 text-primary" />
           <span className="font-heading text-xl font-bold text-accent-foreground">
-            ValetTech
+            Layn
           </span>
         </Link>
 

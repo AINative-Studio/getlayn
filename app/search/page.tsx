@@ -23,7 +23,7 @@ const mockListings = [
     rating: 4.8,
     reviews: 24,
     type: 'Driveway',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=800&auto=format&fit=crop',
     lat: 37.7749,
     lng: -122.4194,
   },
@@ -36,7 +36,7 @@ const mockListings = [
     rating: 4.9,
     reviews: 31,
     type: 'Garage',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop',
     lat: 37.7849,
     lng: -122.4094,
   },
@@ -49,7 +49,7 @@ const mockListings = [
     rating: 4.5,
     reviews: 18,
     type: 'Parking Lot',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3',
     lat: 37.7649,
     lng: -122.4294,
   },
@@ -62,7 +62,7 @@ const mockListings = [
     rating: 4.7,
     reviews: 22,
     type: 'Garage',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3',
     lat: 37.7549,
     lng: -122.4394,
   },
@@ -75,7 +75,7 @@ const mockListings = [
     rating: 4.3,
     reviews: 15,
     type: 'Driveway',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop',
     lat: 37.7449,
     lng: -122.3994,
   },
@@ -88,7 +88,7 @@ const mockListings = [
     rating: 5.0,
     reviews: 42,
     type: 'Garage',
-    image: '',
+    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop',
     lat: 37.7949,
     lng: -122.4494,
   },
@@ -221,8 +221,12 @@ export default function SearchPage() {
 
           {viewMode === 'list' ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {mockListings.map((listing) => (
-                <ListingCard key={listing.id} listing={listing} />
+              {mockListings.map((listing, index) => (
+                <ListingCard
+                  key={listing.id}
+                  listing={listing}
+                  priority={index < 3}
+                />
               ))}
             </div>
           ) : (
@@ -231,8 +235,12 @@ export default function SearchPage() {
                 <MapPlaceholder listings={mockListings} />
               </div>
               <div className="space-y-4 h-[600px] overflow-y-auto">
-                {mockListings.map((listing) => (
-                  <ListingCard key={listing.id} listing={listing} />
+                {mockListings.map((listing, index) => (
+                  <ListingCard
+                    key={listing.id}
+                    listing={listing}
+                    priority={index < 2}
+                  />
                 ))}
               </div>
             </div>

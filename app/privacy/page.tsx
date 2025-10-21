@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
                 <CardContent className="prose prose-slate max-w-none pt-6 dark:prose-invert">
                   <h2>1. Introduction</h2>
                   <p>
-                    Welcome to ValetTech. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our platform and tell you about your privacy rights.
+                    Welcome to Layn. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our platform and tell you about your privacy rights.
                   </p>
 
                   <h2>2. Information We Collect</h2>

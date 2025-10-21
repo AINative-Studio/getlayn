@@ -21,7 +21,7 @@ export default function HowItWorksPage() {
             <div className="container mx-auto px-4">
               <div className="mx-auto max-w-3xl text-center text-white">
                 <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                  How ValetTech Works
+                  How Layn Works
                 </h1>
                 <p className="mt-6 text-lg text-white/90">
                   Simple, secure, and seamless parking for drivers and hosts

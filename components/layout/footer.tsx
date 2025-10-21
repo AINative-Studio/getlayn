@@ -9,7 +9,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <ParkingSquare className="h-6 w-6 text-primary" />
-              <span className="font-heading text-lg font-bold">ValetTech</span>
+              <span className="font-heading text-lg font-bold">Layn</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Connecting drivers with private parking spaces in your neighborhood.
@@ -63,11 +63,11 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>support@valettech.com</span>
+                <span>support@getlayn.com</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>1-800-VALET-TH</span>
+                <span>1-800-GETLAYN</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
@@ -78,7 +78,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between border-t border-border pt-8 text-sm text-muted-foreground md:flex-row">
-          <p>&copy; 2025 ValetTech. All rights reserved.</p>
+          <p>&copy; 2025 Layn. All rights reserved.</p>
           <div className="mt-4 flex space-x-6 md:mt-0">
             <Link href="/privacy" className="hover:text-primary transition-colors">
               Privacy Policy

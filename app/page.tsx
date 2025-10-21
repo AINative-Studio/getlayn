@@ -108,7 +108,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="mb-12 text-center">
               <h2 className="mb-4 font-heading text-3xl font-bold md:text-4xl">
-                Why Choose ValetTech?
+                Why Choose Layn?
               </h2>
             </div>
 
@@ -183,7 +183,7 @@ export default function Home() {
                 Ready to Get Started?
               </h2>
               <p className="mb-8 text-lg text-muted-foreground">
-                Join thousands of homeowners, apartment managers, and business owners earning with ValetTech.
+                Join thousands of homeowners, apartment managers, and business owners earning with Layn.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <Button asChild size="lg" className="text-lg">

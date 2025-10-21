@@ -38,12 +38,12 @@ export default function TermsOfServicePage() {
                 <CardContent className="prose prose-slate max-w-none pt-6 dark:prose-invert">
                   <h2>1. Acceptance of Terms</h2>
                   <p>
-                    By accessing and using ValetTech, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our platform.
+                    By accessing and using Layn, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our platform.
                   </p>
 
                   <h2>2. Description of Service</h2>
                   <p>
-                    ValetTech is a marketplace platform that connects drivers seeking parking spaces with hosts who have parking spaces available for rent. We facilitate transactions but are not a party to the agreements between drivers and hosts.
+                    Layn is a marketplace platform that connects drivers seeking parking spaces with hosts who have parking spaces available for rent. We facilitate transactions but are not a party to the agreements between drivers and hosts.
                   </p>
 
                   <h2>3. User Accounts</h2>
@@ -53,14 +53,14 @@ export default function TermsOfServicePage() {
                   </p>
                   <h3>3.2 Account Requirements</h3>
                   <ul>
-                    <li>You must be at least 18 years old to use ValetTech</li>
+                    <li>You must be at least 18 years old to use Layn</li>
                     <li>You must provide a valid email address and phone number</li>
                     <li>You agree to keep your account information current and accurate</li>
                     <li>You are responsible for all activities under your account</li>
                   </ul>
 
                   <h2>4. Driver Responsibilities</h2>
-                  <p>As a driver using ValetTech, you agree to:</p>
+                  <p>As a driver using Layn, you agree to:</p>
                   <ul>
                     <li>Provide accurate information about your vehicle</li>
                     <li>Arrive and depart within the agreed booking times</li>
@@ -91,7 +91,7 @@ export default function TermsOfServicePage() {
                     <li>All payments are processed securely through our platform</li>
                     <li>Drivers pay the full booking amount at the time of reservation</li>
                     <li>Hosts receive payment after the booking period concludes</li>
-                    <li>ValetTech charges a service fee for facilitating transactions</li>
+                    <li>Layn charges a service fee for facilitating transactions</li>
                   </ul>
                   <h3>6.3 Cancellation Policy</h3>
                   <p>
@@ -113,40 +113,40 @@ export default function TermsOfServicePage() {
                   <h2>8. Insurance and Liability</h2>
                   <h3>8.1 Platform Liability</h3>
                   <p>
-                    ValetTech is a marketplace platform and is not responsible for the conduct of drivers or hosts, the condition of parking spaces, or any damages or losses incurred during bookings.
+                    Layn is a marketplace platform and is not responsible for the conduct of drivers or hosts, the condition of parking spaces, or any damages or losses incurred during bookings.
                   </p>
                   <h3>8.2 User Responsibility</h3>
                   <p>
-                    Users are responsible for maintaining appropriate insurance coverage for their vehicles and property. ValetTech does not provide insurance coverage.
+                    Users are responsible for maintaining appropriate insurance coverage for their vehicles and property. Layn does not provide insurance coverage.
                   </p>
                   <h3>8.3 Disputes</h3>
                   <p>
-                    Any disputes between drivers and hosts should be resolved between the parties. ValetTech may assist in mediation but is not obligated to do so.
+                    Any disputes between drivers and hosts should be resolved between the parties. Layn may assist in mediation but is not obligated to do so.
                   </p>
 
                   <h2>9. Intellectual Property</h2>
                   <p>
-                    All content on the ValetTech platform, including text, graphics, logos, and software, is owned by ValetTech and protected by intellectual property laws. You may not use our intellectual property without permission.
+                    All content on the Layn platform, including text, graphics, logos, and software, is owned by Layn and protected by intellectual property laws. You may not use our intellectual property without permission.
                   </p>
 
                   <h2>10. Privacy</h2>
                   <p>
-                    Your use of ValetTech is subject to our Privacy Policy, which describes how we collect, use, and protect your personal information.
+                    Your use of Layn is subject to our Privacy Policy, which describes how we collect, use, and protect your personal information.
                   </p>
 
                   <h2>11. Disclaimers</h2>
                   <p>
-                    ValetTech is provided "as is" without warranties of any kind. We do not guarantee the platform will be error-free, secure, or available at all times.
+                    Layn is provided "as is" without warranties of any kind. We do not guarantee the platform will be error-free, secure, or available at all times.
                   </p>
 
                   <h2>12. Limitation of Liability</h2>
                   <p>
-                    To the maximum extent permitted by law, ValetTech and its affiliates shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the platform.
+                    To the maximum extent permitted by law, Layn and its affiliates shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the platform.
                   </p>
 
                   <h2>13. Indemnification</h2>
                   <p>
-                    You agree to indemnify and hold ValetTech harmless from any claims, losses, or damages arising from your use of the platform or violation of these terms.
+                    You agree to indemnify and hold Layn harmless from any claims, losses, or damages arising from your use of the platform or violation of these terms.
                   </p>
 
                   <h2>14. Termination</h2>
@@ -166,7 +166,7 @@ export default function TermsOfServicePage() {
 
                   <h2>17. Dispute Resolution</h2>
                   <p>
-                    Any disputes arising from these terms or your use of ValetTech shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
+                    Any disputes arising from these terms or your use of Layn shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
                   </p>
 
                   <h2>18. Contact Information</h2>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
@@ -12,7 +13,6 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import {
   MapPin,
   Star,
-  Car,
   Shield,
   Clock,
   CheckCircle2,
@@ -20,34 +20,184 @@ import {
   ArrowLeft,
 } from 'lucide-react';
 
-const mockListing = {
-  id: '1',
-  title: 'Spacious Driveway - Downtown',
-  address: '123 Main St, San Francisco, CA 94102',
-  description: 'Perfect parking spot in the heart of downtown. Easy access, well-lit area, and available 24/7. Close to public transportation and major attractions. The driveway can accommodate standard vehicles and small SUVs.',
-  price: 8,
-  rating: 4.8,
-  reviews: 24,
-  type: 'Driveway',
-  distance: '0.5 mi',
-  host: {
-    name: 'Sarah Johnson',
-    memberSince: '2023',
-    verified: true,
+const mockListings: { [key: string]: any } = {
+  '1': {
+    id: '1',
+    title: 'Spacious Driveway - Downtown',
+    address: '123 Main St, San Francisco, CA 94102',
+    description: 'Perfect parking spot in the heart of downtown. Easy access, well-lit area, and available 24/7. Close to public transportation and major attractions. The driveway can accommodate standard vehicles and small SUVs.',
+    price: 8,
+    rating: 4.8,
+    reviews: 24,
+    type: 'Driveway',
+    distance: '0.5 mi',
+    image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=800&auto=format&fit=crop',
+    host: {
+      name: 'Sarah Johnson',
+      memberSince: '2023',
+      verified: true,
+    },
+    amenities: [
+      'EV Charging',
+      'Covered',
+      'Security Camera',
+      '24/7 Access',
+      'Well Lit',
+    ],
+    availability: 'Available Now',
+    rules: [
+      'No oversized vehicles',
+      'Keep space clean',
+      'Respect quiet hours after 10 PM',
+    ],
   },
-  amenities: [
-    'EV Charging',
-    'Covered',
-    'Security Camera',
-    '24/7 Access',
-    'Well Lit',
-  ],
-  availability: 'Available Now',
-  rules: [
-    'No oversized vehicles',
-    'Keep space clean',
-    'Respect quiet hours after 10 PM',
-  ],
+  '2': {
+    id: '2',
+    title: 'Covered Garage Spot',
+    address: '456 Market St, San Francisco, CA 94102',
+    description: 'Secure covered garage space in a well-maintained building. Perfect for daily parking with easy in-and-out access. Protected from weather and includes security monitoring.',
+    price: 12,
+    rating: 4.9,
+    reviews: 31,
+    type: 'Garage',
+    distance: '0.8 mi',
+    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop',
+    host: {
+      name: 'Michael Chen',
+      memberSince: '2022',
+      verified: true,
+    },
+    amenities: [
+      'Covered',
+      'Security Camera',
+      '24/7 Access',
+      'Well Lit',
+      'Electric Gate',
+    ],
+    availability: 'Available Now',
+    rules: [
+      'No oversized vehicles',
+      'Keep space clean',
+      'Close gate after entry',
+    ],
+  },
+  '3': {
+    id: '3',
+    title: 'Business Lot - Available Weekends',
+    address: '789 Mission St, San Francisco, CA 94102',
+    description: 'Large business parking lot available on weekends and after business hours. Great for event parking or weekend city visits. Well-maintained and secure location.',
+    price: 6,
+    rating: 4.5,
+    reviews: 18,
+    type: 'Parking Lot',
+    distance: '1.2 mi',
+    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3',
+    host: {
+      name: 'Downtown Properties LLC',
+      memberSince: '2024',
+      verified: true,
+    },
+    amenities: [
+      'Well Lit',
+      'Security Camera',
+      'Large Space',
+      'Easy Access',
+    ],
+    availability: 'Weekends Only',
+    rules: [
+      'Weekends and after 6 PM only',
+      'No commercial vehicles',
+      'Park within marked lines',
+    ],
+  },
+  '4': {
+    id: '4',
+    title: 'Private Garage Space',
+    address: '321 Valencia St, San Francisco, CA 94102',
+    description: 'Private single-car garage in a residential area. Clean, secure, and convenient. Perfect for those who want extra protection for their vehicle.',
+    price: 10,
+    rating: 4.7,
+    reviews: 22,
+    type: 'Garage',
+    distance: '1.5 mi',
+    image: 'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3',
+    host: {
+      name: 'Emily Rodriguez',
+      memberSince: '2023',
+      verified: true,
+    },
+    amenities: [
+      'Covered',
+      'Private',
+      'Security Camera',
+      'Well Lit',
+    ],
+    availability: 'Available Now',
+    rules: [
+      'Single vehicle only',
+      'Keep garage clean',
+      'Lock garage after use',
+    ],
+  },
+  '5': {
+    id: '5',
+    title: 'Street Level Parking',
+    address: '654 Folsom St, San Francisco, CA 94102',
+    description: 'Convenient street-level parking spot in a quiet neighborhood. Easy access and affordable rates. Great for long-term parking needs.',
+    price: 5,
+    rating: 4.3,
+    reviews: 15,
+    type: 'Driveway',
+    distance: '2.0 mi',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop',
+    host: {
+      name: 'James Wilson',
+      memberSince: '2023',
+      verified: true,
+    },
+    amenities: [
+      'Easy Access',
+      'Quiet Area',
+      'Street Level',
+    ],
+    availability: 'Available Now',
+    rules: [
+      'Park within designated area',
+      'No blocking driveway',
+      'Respect neighbors',
+    ],
+  },
+  '6': {
+    id: '6',
+    title: 'Secure Underground Parking',
+    address: '987 Howard St, San Francisco, CA 94102',
+    description: 'Premium underground parking in a modern building. Maximum security with controlled access, surveillance, and on-site management. Perfect for those who value safety and convenience.',
+    price: 15,
+    rating: 5.0,
+    reviews: 42,
+    type: 'Garage',
+    distance: '2.3 mi',
+    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop',
+    host: {
+      name: 'Premium Parking Management',
+      memberSince: '2022',
+      verified: true,
+    },
+    amenities: [
+      'Covered',
+      'Security Camera',
+      '24/7 Access',
+      'Well Lit',
+      'Underground',
+      'Elevator Access',
+    ],
+    availability: 'Available Now',
+    rules: [
+      'Respect height clearance',
+      'Follow directional signs',
+      'No commercial vehicles',
+    ],
+  },
 };
 
 const mockReviews = [
@@ -76,6 +226,7 @@ const mockReviews = [
 
 export default function ListingDetailPage({ params }: { params: { id: string } }) {
   const [selectedDate, setSelectedDate] = useState<Date>();
+  const mockListing = mockListings[params.id] || mockListings['1'];
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -92,9 +243,18 @@ export default function ListingDetailPage({ params }: { params: { id: string } }
 
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2 space-y-6">
-              <div className="relative h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
-                <Car className="h-32 w-32 text-primary/40" />
-                <Badge className="absolute top-4 right-4 text-lg py-2 px-4">
+              <div className="relative h-96 bg-muted rounded-lg overflow-hidden">
+                {mockListing.image && (
+                  <Image
+                    src={mockListing.image}
+                    alt={mockListing.title}
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                  />
+                )}
+                <Badge className="absolute top-4 right-4 text-lg py-2 px-4 z-10">
                   ${mockListing.price}/hr
                 </Badge>
               </div>

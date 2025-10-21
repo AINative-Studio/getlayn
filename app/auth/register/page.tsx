@@ -67,7 +67,7 @@ export default function RegisterPage() {
             </div>
             <CardTitle className="text-2xl text-center">Create an account</CardTitle>
             <CardDescription className="text-center">
-              Join ValetTech and start earning or find parking today
+              Join Layn and start earning or find parking today
             </CardDescription>
           </CardHeader>
           <CardContent>
