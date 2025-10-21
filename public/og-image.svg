@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Main content -->
+  <g transform="translate(100, 200)">
+    <!-- Logo/Brand Name -->
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="white">
+      Layn
+    </text>
+
+    <!-- Tagline -->
+    <text x="0" y="90" font-family="Arial, sans-serif" font-size="42" fill="rgba(255,255,255,0.95)">
+      Turn Empty Spaces into Easy Income
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="160" font-family="Arial, sans-serif" font-size="32" fill="rgba(255,255,255,0.85)">
+      The parking marketplace connecting drivers with
+    </text>
+    <text x="0" y="205" font-family="Arial, sans-serif" font-size="32" fill="rgba(255,255,255,0.85)">
+      private parking spaces
+    </text>
+  </g>
+
+  <!-- Bottom accent -->
+  <circle cx="1050" cy="500" r="150" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="950" cy="550" r="80" fill="rgba(255,255,255,0.08)"/>
+</svg>

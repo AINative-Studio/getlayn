@@ -1,7 +1,34 @@
+import type { Metadata } from 'next';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'Read our privacy policy to understand how Layn protects your personal information and data. Learn about data collection, usage, and your privacy rights.',
+  keywords: [
+    'privacy policy',
+    'data protection',
+    'user privacy',
+    'personal data',
+    'data security',
+  ],
+  openGraph: {
+    title: 'Privacy Policy | Layn',
+    description: 'Read our privacy policy to understand how Layn protects your personal information and data.',
+    url: 'https://getlayn.com/privacy',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy Policy | Layn',
+    description: 'Read our privacy policy to understand how Layn protects your personal information.',
+  },
+  alternates: {
+    canonical: 'https://getlayn.com/privacy',
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (

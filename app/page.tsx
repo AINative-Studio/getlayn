@@ -1,9 +1,54 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Layn - Turn Empty Spaces into Easy Income',
+  description: 'Connect drivers with private parking spaces. List your driveway, garage, or lot and earn money while helping your community find convenient parking.',
+  keywords: [
+    'parking space rental',
+    'rent parking spot',
+    'find parking',
+    'book parking',
+    'private parking',
+    'parking marketplace',
+    'driveway rental',
+    'garage rental',
+    'parking near me',
+    'earn money parking',
+    'list parking space',
+    'monetize driveway',
+    'passive income parking',
+    'rent out garage',
+  ],
+  openGraph: {
+    title: 'Layn - Turn Empty Spaces into Easy Income',
+    description: 'Connect drivers with private parking spaces. List your driveway, garage, or lot and earn money while helping your community find convenient parking.',
+    url: 'https://getlayn.com',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Layn Parking Marketplace',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Layn - Turn Empty Spaces into Easy Income',
+    description: 'Connect drivers with private parking spaces. List your driveway, garage, or lot and earn money.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://getlayn.com',
+  },
+};
 import {
   ParkingSquare,
   DollarSign,

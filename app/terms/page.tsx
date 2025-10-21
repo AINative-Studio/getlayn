@@ -1,7 +1,34 @@
+import type { Metadata } from 'next';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Review the terms and conditions for using Layn parking marketplace platform. Understand user responsibilities, booking policies, and platform guidelines.',
+  keywords: [
+    'terms of service',
+    'terms and conditions',
+    'user agreement',
+    'platform terms',
+    'legal terms',
+  ],
+  openGraph: {
+    title: 'Terms of Service | Layn',
+    description: 'Review the terms and conditions for using Layn parking marketplace platform.',
+    url: 'https://getlayn.com/terms',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Terms of Service | Layn',
+    description: 'Review the terms and conditions for using Layn parking marketplace.',
+  },
+  alternates: {
+    canonical: 'https://getlayn.com/terms',
+  },
+};
 
 export default function TermsOfServicePage() {
   return (

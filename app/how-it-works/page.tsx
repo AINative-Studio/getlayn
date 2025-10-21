@@ -1,7 +1,48 @@
+import type { Metadata } from 'next';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
 import { Car, Home, CreditCard, Shield } from 'lucide-react';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'How It Works - Simple Parking Solutions',
+  description: 'Learn how Layn connects drivers with private parking spaces. Discover how to list your space or find affordable parking in 3 easy steps.',
+  keywords: [
+    'parking space rental',
+    'rent parking spot',
+    'find parking',
+    'book parking',
+    'private parking',
+    'parking marketplace',
+    'how to list parking',
+    'how to book parking',
+    'parking rental process',
+    'list driveway for rent',
+  ],
+  openGraph: {
+    title: 'How It Works - Simple Parking Solutions | Layn',
+    description: 'Learn how Layn connects drivers with private parking spaces. Discover how to list your space or find affordable parking in 3 easy steps.',
+    url: 'https://getlayn.com/how-it-works',
+    type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'How Layn Works',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How It Works - Simple Parking Solutions | Layn',
+    description: 'Learn how Layn connects drivers with private parking spaces in 3 easy steps.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://getlayn.com/how-it-works',
+  },
+};
 
 export default function HowItWorksPage() {
   return (
