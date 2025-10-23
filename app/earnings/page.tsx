@@ -7,7 +7,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { DollarSign, TrendingUp, Calendar } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { DollarSign, TrendingUp, Calendar, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function EarningsCalculatorPage() {
   const [pricePerDay, setPricePerDay] = useState(15);
@@ -154,6 +156,25 @@ export default function EarningsCalculatorPage() {
                     </CardContent>
                   </Card>
                 </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+                  <CardContent className="pt-8 pb-8">
+                    <h3 className="mb-3 font-heading text-2xl font-bold">
+                      Ready to Start Earning?
+                    </h3>
+                    <p className="mb-6 text-muted-foreground max-w-2xl mx-auto">
+                      Join thousands of hosts who are earning passive income by sharing their parking spaces. Apply now and start your hosting journey today.
+                    </p>
+                    <Button asChild size="lg" className="text-lg">
+                      <Link href="/become-a-host">
+                        Apply to Become a Host
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>

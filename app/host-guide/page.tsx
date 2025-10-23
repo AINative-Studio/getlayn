@@ -1,8 +1,10 @@
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Camera, MapPin, DollarSign, MessageSquare, Star, Shield, Clock, CheckCircle2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Camera, MapPin, DollarSign, MessageSquare, Star, Shield, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HostGuidePage() {
   return (
@@ -266,6 +268,25 @@ export default function HostGuidePage() {
                   </ul>
                 </CardContent>
               </Card>
+
+              <div className="mt-12 text-center">
+                <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+                  <CardContent className="pt-8 pb-8">
+                    <h3 className="mb-3 font-heading text-2xl font-bold">
+                      Ready to Become a Host?
+                    </h3>
+                    <p className="mb-6 text-muted-foreground max-w-2xl mx-auto">
+                      Now that you know what it takes, start your hosting journey today. Our simple application takes just a few minutes to complete.
+                    </p>
+                    <Button asChild size="lg" className="text-lg">
+                      <Link href="/become-a-host">
+                        Start Your Application
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>

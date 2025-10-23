@@ -18,6 +18,7 @@ import {
   Eye,
   MoreVertical,
   Users,
+  ArrowRight,
 } from 'lucide-react';
 import {
   DropdownMenu,
@@ -237,6 +238,27 @@ export default function HostDashboardPage() {
                   </CardContent>
                 </Card>
               </div>
+
+              <Card className="border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5">
+                <CardContent className="pt-6 pb-6">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="text-center md:text-left">
+                      <h3 className="font-heading text-xl font-bold mb-2">
+                        Have Another Parking Space?
+                      </h3>
+                      <p className="text-muted-foreground">
+                        Maximize your earnings by listing additional parking spaces. It only takes a few minutes!
+                      </p>
+                    </div>
+                    <Button asChild size="lg" className="shrink-0">
+                      <Link href="/become-a-host">
+                        List Another Space
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
 
             <TabsContent value="listings" className="space-y-4">
