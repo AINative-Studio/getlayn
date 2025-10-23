@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -58,38 +61,23 @@ Beta Access: ${formData.betaAccess}
 Submitted at: ${new Date().toLocaleString()}
     `.trim();
 
-    // In production, you would send this email using a service like:
-    // - Resend (resend.com)
-    // - SendGrid
-    // - AWS SES
-    // - Nodemailer with SMTP
+    // Send email using Resend
+    try {
+      await resend.emails.send({
+        from: 'Layn <onboarding@resend.dev>',
+        to: 'isaac@getlayn.com',
+        subject: `New Host Application - ${formData.name || formData.email}`,
+        text: emailContent,
+      });
 
-    // For now, we'll log it and you can integrate your preferred email service
-    console.log('='.repeat(50));
-    console.log('HOST APPLICATION SUBMISSION');
-    console.log('='.repeat(50));
-    console.log(`To: isaac@getlayn.com`);
-    console.log(`Subject: New Host Application - ${formData.name || formData.email}`);
-    console.log('\n' + emailContent);
-    console.log('='.repeat(50));
+      console.log('✅ Email sent successfully to isaac@getlayn.com');
+    } catch (emailError) {
+      console.error('❌ Error sending email:', emailError);
+      // Still return success to user even if email fails
+      // You might want to log this to a monitoring service
+    }
 
-    // Example with Resend (uncomment when you add the package):
-    /*
-    import { Resend } from 'resend';
-    const resend = new Resend(process.env.RESEND_API_KEY);
-
-    await resend.emails.send({
-      from: 'Layn <onboarding@getlayn.com>',
-      to: 'isaac@getlayn.com',
-      subject: `New Host Application - ${formData.name || formData.email}`,
-      text: emailContent,
-    });
-    */
-
-    // TODO: Replace this with actual email sending
-    // For now, we'll simulate success after logging
-
-    // You can also save to database here using ZeroDB
+    // Optional: Save to database using ZeroDB
     /*
     import { zerodb } from '@/lib/db/zerodb';
     await zerodb.insert('host_applications', {
