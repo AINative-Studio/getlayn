@@ -87,7 +87,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                   <Button asChild size="lg" className="text-lg shadow-lg">
-                    <Link href="/dashboard/host">List Your Space</Link>
+                    <Link href="/become-a-host">List Your Space</Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-black shadow-lg">
                     <Link href="/search">Find Parking Nearby</Link>

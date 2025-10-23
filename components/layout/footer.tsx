@@ -41,8 +41,13 @@ export function Footer() {
             <h3 className="font-heading text-sm font-bold">For Hosts</h3>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link href="/become-a-host" className="text-muted-foreground hover:text-primary transition-colors">
+                  Become a Host
+                </Link>
+              </li>
+              <li>
                 <Link href="/dashboard/host" className="text-muted-foreground hover:text-primary transition-colors">
-                  List Your Space
+                  Host Dashboard
                 </Link>
               </li>
               <li>
